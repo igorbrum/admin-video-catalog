@@ -1,9 +1,9 @@
-
 # Laravel 9.x - Quick Start (Laravel 9.x + Docker)
 
-## Rodar o Laravel
+## Launch Laravel
 
-Clone Repositório
+Clone Repository
+
 ```sh
 git clone https://github.com/devfullcycle/FC3-admin-catalogo-de-videos-php.git laravel9
 ```
@@ -12,21 +12,22 @@ git clone https://github.com/devfullcycle/FC3-admin-catalogo-de-videos-php.git l
 cd laravel9/
 ```
 
-Remova o versionamento (opcional)
+Remove versioning (optional)
+
 ```sh
 rm -rf .git/
 ```
 
+Create the .env file
 
-Crie o Arquivo .env
 ```sh
 cp .env.example .env
 ```
 
+Update the .env file environment variables
 
-Atualize as variáveis de ambiente do arquivo .env
 ```dosini
-APP_NAME="Full Cycle"
+APP_NAME="Admin Video Catalog"
 APP_URL=http://localhost:8000
 
 DB_CONNECTION=mysql
@@ -45,30 +46,29 @@ REDIS_PASSWORD=null
 REDIS_PORT=6379
 ```
 
+Launch project containers
 
-Suba os containers do projeto
 ```sh
 docker-compose up -d
 ```
 
+Access the app container
 
-Acesse o container app
 ```sh
 docker-compose exec app bash
 ```
 
+Install project dependencies
 
-Instalar as dependências do projeto
 ```sh
 composer install
 ```
 
+Generate the Laravel project key
 
-Gerar a key do projeto Laravel
 ```sh
 php artisan key:generate
 ```
 
-
-Acesse o projeto
+Access the project
 [http://localhost:8000](http://localhost:8000)
